@@ -1,0 +1,12 @@
+Programas que precisam estar instalados:
+Python
+flask
+
+A pasta sqlite3 deve ficar na raiz do disco e seu caminho ser icluido no path das variáveis de ambiente do windows.
+para testar se a inclusão nas variáveis de ambiente deu certo, abrir o terminam do windwos (CMD) e digitar
+sqlite3. O terminal deve mostrar a versão do sqlite.
+
+
+Abrir a pasta PI_teste com o VSCode ou Pycharm e executar o arquivo app.py
+O terminal deve mostrar o servidor local executando 127.0.0.1:5000
+cole este endereço no navegador para executar o app
