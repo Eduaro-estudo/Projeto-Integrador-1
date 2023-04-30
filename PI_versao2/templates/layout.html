@@ -1,0 +1,66 @@
+<!-- Aqui fica o layout usado como base para todas as páginas HTML-->
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>CADASTRO DE CLIENTES</title>
+    <!-- Códigos bootstrap-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    -->
+   
+</head> 
+<body>
+    <header>  <!-- Indica para o navegador onde está o cabeçalho da página-->
+      
+      <!--  <nav class="navbar navbar-expand-lg bg-light"> -->
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <!-- aqui ficam os links da barra de navegação-->
+                    <a class="nav-link active" aria-current="page" href="{{url_for('home')}}">Home</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <!-- aqui ficam os links da barra de navegação-->
+                    <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Clientes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('add_user')}}">Área de cadastro</a>
+                    
+                    <!--fim links -->
+                    
+                  </li>
+                  
+                </ul>
+                
+              </div>
+            </div>
+        
+          </nav>
+        <!-- <div style="text-align:center"> <h1>Controle de serviços e clientes</h1></div> -->
+    </header>
+    
+    <!-- Comandos entre CHAVE E PORCEENTAGEM informa para o HTML executar comandos em python, neste caso, -->
+    <!--exibir a mensagem de alerta correspondente a operação realizada-->
+    <div class="container pt-3">
+        
+        {% with messages=get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category,message in messages %}
+                    <div class="alert alert-{{category}}">{{message}}</div>      
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% block body %}
+
+        {% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+{% extends 'layout.html' %} <!-- herda características contidos em layout-->
+{% block body %}
+<style>
+    body{background-color: #faf6e9; 
+        background-image: url("./imagem/wall.png"); 
+           }
+
+       .titulo{
+        position:botton;
+        color:rgb(167, 63, 15);
+        text-align: center;
+        font-size: 400%;
+        font-weight: bold; 
+        font-family: 'verdana';
+       }
+
+       .titulo2{
+        color:rgb(95, 63, 14);
+        text-align: center;
+        font-size: 200%;
+        font-weight: bold; 
+        font-family: 'verdana';
+       }
+       .titulo3{
+        color:rgb(95, 63, 14);
+        text-align: center;
+        font-size: 100%;
+        font-weight: bold; 
+        font-family: 'verdana';
+       }
+
+
+       div.moldura {
+        display: inline-block;
+       
+        border:2px solid black;
+        border-radius: 10px;
+        width: 100px;
+        height: 100px
+       }     
+       <!-- dentro destas divs devem ficar os logotipos dos fabricantes dos aparelhos -->
+       div#m1{
+    
+
+       }
+
+       div#m2{
+        
+      }
+      div#m3{
+        
+      }
+
+      div#m4{
+        
+       }
+
+      div#m5{
+        
+       }
+       div#m6{
+        
+      }
+      div#m7{
+        
+      }
+      div#m8{
+        
+      }
+      div#m9{
+        
+      }
+      div#m10{
+        
+      }
+
+
+</style>
+
+<body>
+       
+    <div class="titulo"> Eletrônica Dom Bosco</div>
+    <div class="titulo2"> Assistência técnica especializada</div>
+    <br>
+    <br>
+    <div class="titulo3"> TV LCD - Som - Microondas</div>
+
+<!-- logotipos marcas-->
+<div class="moldura" id="m1">  </div>
+<div class="moldura" id="m2">  </div>
+<div class="moldura" id="m3">  </div>
+<div class="moldura" id="m4">  </div>
+<div class="moldura" id="m5">  </div>
+<div class="moldura" id="m6">  </div> 
+<div class="moldura" id="m7">  </div>
+<div class="moldura" id="m8">  </div>
+<div class="moldura" id="m9">  </div>
+<div class="moldura" id="m10"> </div> 
+
+    
+</body>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+<!--- Template de edição de clientes-->
+{% extends 'layout.html' %} <!-- herda características contidos em layout-->
+{% block body %}
+<div class="row">
+    <div class="col-5 mx-auto"> <!-- comandos bootstrap-->
+        <h3>Editar dados</h3><hr>
+
+        <!-- publicação do formulário atrvés do metodo POSt para o banco de dados-->
+        <form method="post" action="{{url_for('edit_user',id=datas.ID)}}"> 
+             
+            <div class="form group">
+                <label>Serviço</label>
+                <input type="text" name="servico" maxlength="10" required class="form-control" value="{{datas.SERVICO}}">
+            </div>
+            <div class="form group">
+                <label>Data entrada</label>
+                <input type="text" name="dentrada" maxlength="10" required class="form-control" value="{{datas.DENTRADA}}">
+            </div>
+
+            <div class="form group">
+                <label>Data saída</label>
+                <input type="text" name="dsaida" maxlength="10" required class="form-control" value="{{datas.DSAIDA}}">
+            </div>
+             
+            <div class="form group">
+                <label>Equipamento</label>
+                <input type="text" name="equipamento" maxlength="30" required class="form-control" value="{{datas.EQUIPAMENTO}}">
+            </div>
+            <div class="form group">
+                <label>Nome</label>
+                <input type="text" name="nome" maxlength="30" required class="form-control" value="{{datas.NOME}}">
+            </div>
+            <div class="form group">
+                <label>Endereço</label>
+                <input type="text" name="endereco"  maxlength="30" required class="form-control" value="{{datas.ENDERECO}}">
+            </div>
+            <div class="form group">
+                <label>Telefone</label>
+                <input type="text" name="fone" maxlength="15" required class="form-control" value="{{datas.FONE}}">
+            </div>
+            
+            
+            <!-- confirmação da edição-->
+            <input type="submit" value="Confirmar" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+{% endblock %}

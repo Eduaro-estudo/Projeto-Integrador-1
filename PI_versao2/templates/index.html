@@ -1,0 +1,47 @@
+<!--- Template que constroi a tela inicial que mostra clientes cadastrados no banco de dados (BD)-->
+{% extends 'layout.html' %} <!-- herda características contidos em layout-->
+{% block body %}  <!-- indica para o HTML que haverá códigos python para serem executados-->
+
+<!-- estrutura da tabela básica pega em exemplo bootstrap-->
+<div style="text-align:center"> <h1>Clientes e serviços cadastrados</h1></div>
+<div class="row">
+<h3 class='text-center text-muted mb-3'></h3>
+
+<!--estrutura do botão novo cadastro, que chama template add_user-->
+<p class="text-right"><a href="{{url_for('add_user')}}" class="btn btn-success">Cadastrar novo serviço</a></p>
+
+<table class="table table-bordered">
+    <thead>  <!-- tag usada para destacar títulos de uma tabela-->
+      <tr>   <!-- "tr" define uma linha em uma tabela, cada "tr" equivale a uma linha-->
+        <th scope="col">ID</th>   <!-- "th" define uma coluna em uma tabela-->
+        <th scope="col">Serviço</th>   <!-- atributo "scope" identifica se uma célula é um grupo cabeçalho da coluna, linha, coluna ou grupo de linhas--> 
+        <th scope="col">Entrada</th>
+        <th scope="col">Saída</th>
+        <th scope="col">Eqipamento</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Endereço</th>
+        <th scope="col">Telefone</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        {% for row in datas %}
+      <tr>                      <!--"loop.index vai receber info do campo ID"-->
+        <td>{{loop.index}}</td> <!-- td cria uma coluna para inserção de conteúdo-->
+        <td>{{row.SERVICO}}</td>
+        <td>{{row.DENTRADA}}</td>
+        <td>{{row.DSAIDA}}</td>
+        <td>{{row.EQUIPAMENTO}}</td>
+        <td>{{row.NOME}}</td>
+        <td>{{row.ENDERECO}}</td>
+        <td>{{row.FONE}}</td>
+      <!-- definição dos botões editar  e apagar - cada usúario terá seus botões ao lado-->
+        <td><a href="{{url_for('edit_user',id=row.ID)}}" class="btn btn-primary">Editar</a></td>
+        <td><a href="{{url_for('delete_user',id=row.ID)}}" class="btn btn-danger" onclick="return confirm ('Tem certeza que deseja apagar?')">Deletar</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
