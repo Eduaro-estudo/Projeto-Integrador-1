@@ -10,13 +10,21 @@ sql = ''' CREATE TABLE "users" (
     "SERVICO" VARCHAR(10) NOT NULL,
     "DENTRADA" VARCHAR(10) NOT NULL,
     "DSAIDA" VARCHAR(10) NULL,
+    "DESCRICAO" VARCHAR(60) NOT NULL,
     "EQUIPAMENTO" VARCHAR(30) NOT NULL,
     "NOME" VARCHAR(30) NOT NULL,
     "ENDERECO" VARCHAR(50) NOT NULL,
     "FONE" INTEGER(12) NOT NULL,
     "ORCAMENTO" VARCHAR(200) NOT NULL
           
-)''' # aspas triplas por se multiplas linhas
+)
+
+CREATE TABLE "funcionario" (
+    "ID" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "NOME" VARCHAR(30) NOT NULL,
+)
+
+''' # aspas triplas por se multiplas linhas
 
 cur.execute(sql) # colocar os campos na tabela
 con.commit()     # registra dados
