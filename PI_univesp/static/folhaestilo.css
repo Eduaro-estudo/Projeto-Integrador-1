@@ -1,0 +1,41 @@
+
+
+.titulo{
+    position:botton;
+    color:rgb(192, 54, 12);
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #000;
+    text-align: center;
+    font-size: 500%;
+    font-weight: bold; 
+    font-family: 'verdana';
+   }
+
+   .titulo2{
+    color:rgb(153, 74, 22);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    text-align: center;
+    font-size: 300%;
+    font-weight: bold; 
+    font-family: 'verdana';
+   }
+   .titulo3{
+    color:rgb(190, 60, 20);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold; 
+    font-family: 'verdana';
+   }
+
+
+   div.moldura {
+    display: inline-block;
+   
+    border:2px solid black;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+   }

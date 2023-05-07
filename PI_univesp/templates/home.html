@@ -1,89 +1,54 @@
 {% extends 'layout.html' %} <!-- herda características contidos em layout-->
 {% block body %}
+
+<link rel="stylesheet" type="text/css" href="../static/folhaestilo.css"> <!-- link para folha de estilo CSS-->
+
 <style>
-    body{background-color: #faf6e9; 
-        background-image: url("./imagem/wall.png"); 
-           }
+    body{ position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-image: url("../static/wall-rec_80.png"); 
+        }
+          
+      div#m1{ background-image: url("../static/SAMSUNG.jpg"); }
 
-       .titulo{
-        position:botton;
-        color:rgb(167, 63, 15);
-        text-align: center;
-        font-size: 400%;
-        font-weight: bold; 
-        font-family: 'verdana';
-       }
+      div#m2{ background-image: url("../static/LG.jpg"); }
 
-       .titulo2{
-        color:rgb(95, 63, 14);
-        text-align: center;
-        font-size: 200%;
-        font-weight: bold; 
-        font-family: 'verdana';
-       }
-       .titulo3{
-        color:rgb(95, 63, 14);
-        text-align: center;
-        font-size: 100%;
-        font-weight: bold; 
-        font-family: 'verdana';
-       }
+      div#m3{ background-image: url("../static/CCE.png"); }
 
+      div#m4{ background-image: url("../static/philco.png"); }
 
-       div.moldura {
-        display: inline-block;
-       
-        border:2px solid black;
-        border-radius: 10px;
-        width: 100px;
-        height: 100px
-       }     
-       <!-- dentro destas divs devem ficar os logotipos dos fabricantes dos aparelhos -->
-       div#m1{
-    
+      div#m5{ background-image: url("../static/sony.jpg"); }
 
-       }
+      div#m6{ background-image: url("../static/toshiba.jpg"); }
 
-       div#m2{
-        
-      }
-      div#m3{
-        
-      }
+      div#m7{ background-image: url("../static/philips.jpg"); }
 
-      div#m4{
-        
-       }
+      div#m8{ background-image: url("../static/aiwa.jpeg"); }
 
-      div#m5{
+      div#m9{ background-image: url("../static/eletrolux.jpg"); }
         
-       }
-       div#m6{
-        
-      }
-      div#m7{
-        
-      }
-      div#m8{
-        
-      }
-      div#m9{
-        
-      }
-      div#m10{
-        
-      }
+      div#m10{ background-image: url("../static/bratemp.png"); }
 
+      div#m11{ background-image: url("../static/aoc.jpg"); }
+        
+      div#m12{ background-image: url("../static/tcl.png"); }
 
 </style>
 
 <body>
-       
+     <br>
+
     <div class="titulo"> Eletrônica Dom Bosco</div>
     <div class="titulo2"> Assistência técnica especializada</div>
     <br>
     <br>
     <div class="titulo3"> TV LCD - Som - Microondas</div>
+    <br>
+    <br>
+    <br>
+    <br>
 
 <!-- logotipos marcas-->
 <div class="moldura" id="m1">  </div>
@@ -96,7 +61,8 @@
 <div class="moldura" id="m8">  </div>
 <div class="moldura" id="m9">  </div>
 <div class="moldura" id="m10"> </div> 
-
+<div class="moldura" id="m11"> </div>
+<div class="moldura" id="m12"> </div>
     
 </body>
 
