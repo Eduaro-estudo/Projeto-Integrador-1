@@ -1,14 +1,47 @@
-# Eduardo A. A. Garcia -Projeto Integrador 1 - 30/04/23 - deploy funcionando
+# Eduardo A. A. Garcia -  Gabrielle de Souza
+# Projeto Integrador 1 - 21/05/23 - deploy funcionando
 # Este é o primeiro arquivo a ser executado, onde ficam as rotas para os outros templates
 # projeto executou com sucesso no servidor pythonanywhere.com
 
 from flask import Flask, render_template,request,redirect,url_for,flash
 import sqlite3 as sql
+from flask_login import logout_user
 
 app=Flask(__name__)
 app.secret_key="projeto.integrador.engenharia" # se não for colocado dá erro no servidor quando fizer deploy
 
 @app.route("/")
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+
+@app.route('/processar_login.py', methods=['POST'])
+def processar_login():
+    username = request.form['username']
+    password = request.form['password']
+    
+    # Verifique as credenciais (lógica de autenticação)
+    if username == 'piunivesp' and password == '123456':
+        return render_template("home.html")
+    else:
+      
+       return render_template("errologin.html")
+    
+@app.route('/logout')
+def logout():
+    response = redirect(url_for('login'))
+    response.delete_cookie('session_id')
+    return response
+
+   
+
+
+      
+
+ 
+
 @app.route("/home")
 def home():
     return render_template("home.html")
